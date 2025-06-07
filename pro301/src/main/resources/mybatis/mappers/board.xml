@@ -16,12 +16,12 @@
 
     <select id="selectAllArticlesList" resultMap="articlesResult">
         <![CDATA[
-      SELECT level, articleNO, parentNO, title, content, writeDate, imageFileName, id
-      from t_board
-      START WITH  parentNO=0
-      CONNECT BY PRIOR articleNO=parentNO
-      ORDER SIBLINGS BY articleNO DESC
-    ]]>
+          SELECT level, articleNO, parentNO, title, content, writeDate, imageFileName, id
+          from t_board
+          START WITH  parentNO=0
+          CONNECT BY PRIOR articleNO=parentNO
+          ORDER SIBLINGS BY articleNO DESC
+        ]]>
     </select>
 
     <!-- imageFileName 을 삭제함 -->
