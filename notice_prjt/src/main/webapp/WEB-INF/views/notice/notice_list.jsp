@@ -29,9 +29,13 @@
             <td>등록일</td>
         </tr>
 
+        <%-- if -->
         <c:choose>
 
+            <%-- (값): 공지사항 리스트가 비어있지 않은 경우 -->
             <c:when test="${not empty noticesList}">
+
+                <%-- noticesList의 각 항목을 var값"notices"라는 이름으로 반복 출력 -->
                 <c:forEach var="notices" items="${noticesList}" varStatus="status">
                     <tr align="center">
                         <td>${notices.n_idx}</td>
@@ -43,6 +47,7 @@
             </c:when>
 
             <c:otherwise>
+            <%-- 공지사항이 없을 경우 -->
                 <tr>
                     <td colspan="4" align="center">등록된 공지사항이 없습니다.</td>
                 </tr>

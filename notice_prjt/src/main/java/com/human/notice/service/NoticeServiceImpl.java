@@ -16,6 +16,7 @@ public class NoticeServiceImpl implements NoticeService {
     @Autowired
     NoticeDAO noticeDAO;
 
+    //오버라이드
     @Override
     public List<NoticeVO> listNotices() throws Exception {
         List<NoticeVO> noticesList = noticeDAO.selectAllNoticesList();
