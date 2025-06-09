@@ -31,15 +31,13 @@
 
         <c:choose>
 
-            <c:when test="${not empty notices}">
-                <c:forEach var="notice" items="${notices}" varStatus="status">
+            <c:when test="${not empty noticesList}">
+                <c:forEach var="notices" items="${noticesList}" varStatus="status">
                     <tr align="center">
-                        <td>${notice.n_idx}</td>
-                        <td>${notice.n_category}</td>
-                        <td align="left">${notice.n_title}</td>
-                        <td>
-                            <fmt:formatDate value="${notice.n_regdate}" pattern="yyyy.MM.dd" />
-                        </td>
+                        <td>${notices.n_idx}</td>
+                        <td>${notices.n_category}</td>
+                        <td align="left">${notices.n_title}</td>
+                        <td>${notices.n_regdate}</td>
                     </tr>
                 </c:forEach>
             </c:when>

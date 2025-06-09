@@ -15,7 +15,7 @@
     </resultMap>
 
     <select id="selectAllNoticesList" resultMap="noticesResult">
-        <![CDATA[
+    <![CDATA[
           SELECT n_idx, n_category, n_title, n_content, n_regdate, n_update, n_status
           from tb_notice
           ORDER BY n_idx DESC
